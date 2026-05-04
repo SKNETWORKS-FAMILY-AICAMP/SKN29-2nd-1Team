@@ -1,0 +1,239 @@
+.insight-page {
+  padding-bottom: 90px;
+}
+
+.insight-page-header {
+  margin-top: 0;
+}
+
+.insight-tabs {
+  margin-bottom: 20px;
+}
+
+.insight-body {
+  margin-top: 0;
+}
+
+.insight-chart-wrap {
+  min-height: 340px;
+}
+
+.insight-empty-chart {
+  width: 100%;
+  min-height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text3);
+  font-size: 13px;
+  background: var(--bg2);
+  border-radius: var(--r-sm);
+}
+
+.insight-wave-card {
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 0, 0, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(255, 0, 0, 0.06), transparent 70%),
+    var(--bg2);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.insight-wave-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 45, 45, 0.16);
+  border-radius: 50%;
+  filter: blur(40px);
+  top: -90px;
+  right: -60px;
+  pointer-events: none;
+}
+
+.insight-wave-head {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 6px;
+}
+
+.insight-wave-kicker {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 900;
+  color: var(--red);
+  background: rgba(255, 0, 0, 0.08);
+  border: 1px solid rgba(255, 0, 0, 0.16);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.insight-wave-head strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.insight-wave-head p {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.insight-wave-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  margin-top: 6px;
+}
+
+.insight-wave-metrics div {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.insight-wave-metrics span {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.insight-wave-metrics strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.insight-summary-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.insight-summary-card {
+  min-height: 140px;
+  padding: 20px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 0, 0, 0.10), transparent 40%),
+    var(--bg2);
+}
+
+.insight-summary-card span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.insight-summary-card strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.insight-summary-card p {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text2);
+}
+
+@media (max-width: 860px) {
+  .insight-summary-grid,
+  .insight-wave-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Dark readability refinement */
+.dark .page,
+.dark [class*="page"],
+.dark [class*="Page"] {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+.dark [class*="section"],
+.dark [class*="Section"] {
+  color: var(--text2) !important;
+}
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="heading"],
+.dark [class*="Heading"] {
+  color: var(--text) !important;
+}
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="label"],
+.dark [class*="Label"] {
+  color: var(--text2) !important;
+}
+
+
+/* Final stable SVG chart system */
+.svg-chart { width: 100%; height: 300px; display: block; overflow: visible; }
+.svg-chart--line { height: 300px; }
+.svg-grid { stroke: rgba(255,45,45,.10); stroke-dasharray: 4 6; stroke-width: 1; }
+.svg-tick { fill: var(--text3); font-size: 12px; font-weight: 600; }
+.svg-label { fill: var(--text2); font-size: 12px; font-weight: 700; }
+.svg-label-strong { fill: var(--text); font-weight: 800; }
+.svg-value { fill: var(--red); font-size: 12px; font-weight: 900; }
+.svg-track, .svg-bar-bg { fill: rgba(255,45,45,.06); }
+.svg-bar { fill: var(--red); transform-box: fill-box; transform-origin: bottom; animation: chartGrowY .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-bar-horizontal { fill: var(--red); transform-box: fill-box; transform-origin: left; animation: chartGrowX .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-area { opacity: 0; animation: chartFade .9s ease .25s forwards; }
+.svg-point { fill: #fff; stroke: var(--red); stroke-width: 4; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-point-group:nth-of-type(1) .svg-point { animation-delay: .15s; }
+.svg-point-group:nth-of-type(2) .svg-point { animation-delay: .25s; }
+.svg-point-group:nth-of-type(3) .svg-point { animation-delay: .35s; }
+.svg-point-group:nth-of-type(4) .svg-point { animation-delay: .45s; }
+.svg-scatter-dot { fill: var(--red); opacity: .66; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-wave-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-soft-fill { fill: rgba(255,45,45,.10); opacity: 0; animation: chartFade .8s ease .25s forwards; }
+@keyframes chartGrowY { from { transform: scaleY(0); opacity:.4; } to { transform: scaleY(1); opacity:1; } }
+@keyframes chartGrowX { from { transform: scaleX(0); opacity:.4; } to { transform: scaleX(1); opacity:1; } }
+@keyframes chartDraw { to { stroke-dashoffset: 0; } }
+@keyframes chartFade { to { opacity: 1; } }
+@keyframes chartPop { from { transform: scale(0); opacity:0; } to { transform: scale(1); opacity:1; } }
+.advanced-chart-card { overflow: hidden; }

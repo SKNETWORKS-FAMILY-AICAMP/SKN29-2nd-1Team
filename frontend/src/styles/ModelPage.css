@@ -1,0 +1,49 @@
+.cm-wrap { width:100%; }
+.cm-labels-top { display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin-bottom:6px; }
+.cm-label      { font-size:11px; font-weight:700; color:var(--text2); text-align:center; }
+.cm-row        { display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin-bottom:8px; }
+.cm-label-side { font-size:11px; font-weight:700; color:var(--text2); display:flex; align-items:center; }
+.cm-cell       { border:1px solid var(--border); border-radius:var(--r-sm); padding:14px 12px; display:flex; flex-direction:column; gap:3px; text-align:center; cursor:default; }
+.cm-cell-label { font-size:11px; font-weight:800; letter-spacing:0.5px; }
+.cm-cell-val   { font-size:22px; font-weight:800; letter-spacing:-1px; line-height:1; }
+.cm-cell-pct   { font-size:10px; color:var(--text3); font-family:monospace; }
+.cm-cell-desc  { font-size:10px; color:var(--text3); margin-top:2px; line-height:1.4; }
+.model-overfit-row  { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.model-overfit-item { display:flex; align-items:center; gap:6px; padding:5px 10px; background:var(--bg2); border:1px solid var(--border); border-radius:var(--r-sm); }
+.model-overfit-name { font-size:11px; font-weight:600; color:var(--text2); }
+
+
+/* Dark readability refinement */
+.dark .page,
+.dark [class*="page"],
+.dark [class*="Page"] {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+.dark [class*="section"],
+.dark [class*="Section"] {
+  color: var(--text2) !important;
+}
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="heading"],
+.dark [class*="Heading"] {
+  color: var(--text) !important;
+}
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="label"],
+.dark [class*="Label"] {
+  color: var(--text2) !important;
+}

@@ -1,0 +1,380 @@
+/* Applied layout override for Part 5/6/7 - Part 4 style */
+.trend-part-page,
+.model-page {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 38px 6px 70px !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+.part-header,
+.model-header {
+  margin-bottom: 22px !important;
+}
+
+.part-label,
+.part,
+.part-label p {
+  color: #ef0016 !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  margin-bottom: 18px !important;
+  font-weight: 900 !important;
+}
+
+.part-header h1,
+.model-header h1,
+.trend-part-page h1,
+.model-page h1 {
+  font-size: 30px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.7px !important;
+  margin: 0 !important;
+}
+
+.part-desc,
+.desc,
+.model-page p {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+}
+
+.part-page-badge,
+.page-badge {
+  height: 34px !important;
+  padding: 0 16px !important;
+  font-size: 12px !important;
+  border-radius: 999px !important;
+}
+
+.part-status-pill,
+.status-pill {
+  height: 28px !important;
+  padding: 0 12px !important;
+  font-size: 12px !important;
+}
+
+.part-kpi-grid,
+.kpi-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 18px 0 28px !important;
+}
+
+.part-kpi-card,
+.kpi-card {
+  width: 90px !important;
+  min-height: 64px !important;
+  padding: 14px 16px !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.part-kpi-card span,
+.kpi-card span {
+  font-size: 11px !important;
+  margin-bottom: 6px !important;
+}
+
+.part-kpi-card strong,
+.kpi-card strong {
+  font-size: 19px !important;
+  line-height: 1.1 !important;
+}
+
+.part-kpi-card small,
+.kpi-card small {
+  display: none !important;
+}
+
+.part-step-grid,
+.step-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 8px !important;
+  margin: 0 0 26px !important;
+}
+
+.part-step-card,
+.step-card {
+  height: 66px !important;
+  padding: 14px 16px !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+.part-step-card span,
+.step-card span {
+  font-size: 10px !important;
+  line-height: 1 !important;
+  margin-bottom: 6px !important;
+}
+
+.part-step-card strong,
+.step-card strong {
+  font-size: 14px !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.part-step-card small,
+.step-card small {
+  display: none !important;
+}
+
+.part-body-layout,
+.body-layout,
+.content-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 326px !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+.part-main-card,
+.main-card,
+.main-panel {
+  min-height: 590px !important;
+  padding: 48px 30px 34px !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.part-guide-card,
+.guide-card,
+.side-panel {
+  min-height: 590px !important;
+  padding: 26px !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  position: sticky !important;
+  top: 84px !important;
+}
+
+.part-section-label,
+.section-label {
+  font-size: 12px !important;
+  margin-bottom: 100px !important;
+  color: #6b7280 !important;
+}
+
+.part-info-card,
+.part-chart-card,
+.overview-card,
+.chart-card {
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  padding: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.part-info-card h2,
+.part-final-card h2,
+.overview-card h2,
+.decision-box h2 {
+  font-size: 22px !important;
+  line-height: 1.35 !important;
+  margin: 16px 0 12px !important;
+}
+
+.part-info-card p,
+.part-small-card p,
+.part-guide-card p,
+.part-guide-card li,
+.part-chart-head p,
+.overview-card p,
+.insight p,
+.guide-card p,
+.guide-card li {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.part-grid-3,
+.insight-grid,
+.error-case-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 18px !important;
+}
+
+.part-small-card,
+.insight {
+  min-height: 190px !important;
+  padding: 26px !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+.part-small-card span,
+.part-card-tag,
+.part-chip,
+.insight span,
+.chip {
+  height: 34px !important;
+  padding: 0 14px !important;
+  font-size: 11px !important;
+  border-radius: 999px !important;
+}
+
+.part-small-card h3,
+.insight h3 {
+  font-size: 22px !important;
+  line-height: 1.35 !important;
+  margin: 22px 0 14px !important;
+}
+
+.part-guide-top,
+.guide-top {
+  height: 32px !important;
+}
+
+.part-guide-top span,
+.guide-top span {
+  height: 28px !important;
+  padding: 0 12px !important;
+  font-size: 11px !important;
+}
+
+.part-guide-top b,
+.guide-top b {
+  font-size: 13px !important;
+}
+
+.part-guide-card h2,
+.guide-card h2,
+.side-panel h3 {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+  margin: 36px 0 46px !important;
+}
+
+.part-guide-sub,
+.guide-sub {
+  font-size: 12px !important;
+  margin-bottom: 50px !important;
+}
+
+.part-guide-card ol,
+.guide-card ol,
+.side-panel ol {
+  padding-left: 24px !important;
+  margin: 0 0 52px !important;
+}
+
+.part-guide-card li,
+.guide-card li,
+.side-panel li {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  padding-left: 4px !important;
+}
+
+.part-guide-note,
+.guide-note,
+.note-box {
+  border-radius: 9px !important;
+  padding: 16px !important;
+  margin-top: auto !important;
+  margin-bottom: 18px !important;
+}
+
+.part-guide-nav,
+.guide-nav {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+
+.part-guide-nav button,
+.guide-nav button {
+  height: 38px !important;
+  padding: 0 14px !important;
+  border-radius: 9px !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+}
+
+.part-back-btn,
+.back-btn {
+  height: 38px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+  margin-bottom: 44px !important;
+}
+
+@media (max-width: 980px) {
+  .trend-part-page,
+  .model-page {
+    padding: 28px 16px 56px !important;
+  }
+
+  .part-body-layout,
+  .body-layout,
+  .content-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .part-guide-card,
+  .guide-card,
+  .side-panel {
+    position: static !important;
+    min-height: auto !important;
+  }
+
+  .part-step-grid,
+  .step-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .part-main-card,
+  .main-card,
+  .main-panel {
+    min-height: auto !important;
+  }
+
+  .part-section-label,
+  .section-label {
+    margin-bottom: 32px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .part-header h1,
+  .model-header h1,
+  .trend-part-page h1,
+  .model-page h1 {
+    font-size: 28px !important;
+  }
+
+  .part-kpi-card,
+  .kpi-card {
+    width: calc(50% - 6px) !important;
+  }
+
+  .part-step-grid,
+  .step-grid,
+  .part-grid-2,
+  .part-grid-3,
+  .insight-grid,
+  .error-case-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .part-main-card,
+  .part-guide-card,
+  .main-card,
+  .guide-card,
+  .main-panel,
+  .side-panel {
+    padding: 22px !important;
+  }
+}

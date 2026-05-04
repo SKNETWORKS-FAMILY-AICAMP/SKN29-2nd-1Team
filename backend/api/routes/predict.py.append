@@ -1,0 +1,44 @@
+
+# 아래 라우트가 기존 predict.py에 없으면 추가하세요.
+# 기존 predict_video_dict(raw), _predict(video)가 이미 있어야 합니다.
+from typing import List
+
+class BulkPredictRequest(BaseModel):
+    videos: List[Dict[str, Any]]
+
+@router.post("/bulk")
+def predict_bulk(payload: BulkPredictRequest) -> Dict[str, Any]:
+    """프론트가 영상 먼저 렌더링한 뒤 AI 점수만 따로 가져오는 고속 bulk 예측 API."""
+    results = []
+    for raw in payload.videos[:80]:
+        vid = raw.get("video_id") or raw.get("id")
+        try:
+            pred = predict_video_dict(raw)
+            results.append({
+                "video_id": vid,
+                "id": vid,
+                "prediction": pred,
+                "prediction_status": "ready",
+            })
+        except Exception as exc:
+            views = _safe_float(raw.get("views") or raw.get("view_count"), 0.0)
+            likes = _safe_float(raw.get("likes") or raw.get("like_count"), 0.0)
+            comments = _safe_float(raw.get("comments") or raw.get("comment_count"), 0.0)
+            engagement = (likes + comments) / max(views, 1.0)
+            fallback_score = int(max(1, min(99, 20 + math.log10(max(views, 1)) * 6 + min(25, engagement * 250))))
+            results.append({
+                "video_id": vid,
+                "id": vid,
+                "prediction_status": "fallback",
+                "prediction": {
+                    "model_type": "rule_fallback",
+                    "score_source": "bulk_fallback",
+                    "ai_score": fallback_score,
+                    "tdi_probability": round(fallback_score / 100, 4),
+                    "predicted_24h_views": int(views * 1.12 + comments * 25),
+                    "predicted_growth": int(max(0, views * 0.12 + comments * 25)),
+                    "label": "AI 분석 보조 계산",
+                    "message": f"예측 실패({exc.__class__.__name__})로 fallback 점수를 사용했습니다.",
+                },
+            })
+    return {"ok": True, "count": len(results), "items": results, "predictions": results}

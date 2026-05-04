@@ -1,0 +1,533 @@
+/* TrendIt Parts 5/6/7 Apple Unified Style */
+.trend-part-page {
+  --red: #ef0016;
+  --red-soft: #fff2f3;
+  --text: #111827;
+  --muted: #5f6b7a;
+  --subtle: #8b95a1;
+  --line: #edf0f3;
+  --card: #ffffff;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 38px 28px 72px;
+  color: var(--text);
+  background: #ffffff;
+}
+
+.part-back-btn {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 800;
+  color: #4b5563;
+  margin-bottom: 34px;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.part-back-btn:hover {
+  transform: translateY(-1px);
+  border-color: #d1d5db;
+  box-shadow: 0 8px 18px rgba(17,24,39,.05);
+}
+
+.part-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.part-label {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .09em;
+  margin: 0 0 14px;
+}
+
+.part-header h1 {
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.part-desc {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 18px 0;
+  max-width: 760px;
+}
+
+.part-page-badge,
+.part-status-pill,
+.part-chip,
+.part-guide-top span,
+.part-card-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 8px 12px;
+}
+
+.part-page-badge {
+  color: var(--red);
+  background: var(--red-soft);
+  border: 1px solid #ffb8bf;
+  white-space: nowrap;
+}
+
+.part-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.part-status-pill {
+  color: #10a34a;
+  background: #ebfff2;
+  border: 1px solid #9af0b8;
+}
+
+.part-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.part-kpi-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  transition: .25s ease;
+  box-shadow: 0 10px 24px rgba(17,24,39,.035);
+}
+
+.part-kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(17, 24, 39, .08);
+}
+
+.part-kpi-card span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+
+.part-kpi-card strong {
+  font-size: 24px;
+  letter-spacing: -.8px;
+}
+
+.part-kpi-card small {
+  display: block;
+  margin-top: 7px;
+  color: var(--subtle);
+  font-weight: 700;
+}
+
+.part-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.part-step-card {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: .24s ease;
+  box-shadow: 0 8px 20px rgba(17,24,39,.025);
+}
+
+.part-step-card:hover {
+  transform: translateY(-2px);
+}
+
+.part-step-card span {
+  display: block;
+  color: #777;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+
+.part-step-card strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.part-step-card small {
+  color: var(--muted);
+}
+
+.part-step-card.active {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+  box-shadow: 0 16px 34px rgba(239, 0, 22, .18);
+}
+
+.part-step-card.active span,
+.part-step-card.active small {
+  color: rgba(255,255,255,.82);
+}
+
+.part-body-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 18px;
+}
+
+.part-main-card,
+.part-guide-card,
+.part-chart-card,
+.part-info-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(17, 24, 39, .045);
+}
+
+.part-main-card {
+  min-height: 510px;
+  padding: 28px;
+}
+
+.part-guide-card {
+  padding: 23px;
+  align-self: start;
+  position: sticky;
+  top: 86px;
+}
+
+.part-section-label {
+  color: #606a78;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 0 0 20px;
+}
+
+.part-info-card {
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.part-card-tag,
+.part-chip,
+.part-guide-top span {
+  background: var(--red-soft);
+  border: 1px solid #ffb8bf;
+  color: var(--red);
+  font-size: 10px;
+  padding: 6px 10px;
+}
+
+.part-info-card h2,
+.part-final-card h2 {
+  font-size: 28px;
+  margin: 16px 0 10px;
+  letter-spacing: -1px;
+}
+
+.part-info-card p,
+.part-guide-card p,
+.part-guide-card li,
+.part-small-card p {
+  color: #5b6472;
+  line-height: 1.75;
+  font-size: 13px;
+}
+
+.part-chart-card {
+  padding: 18px 18px 8px;
+  margin-bottom: 16px;
+}
+
+.part-chart-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.part-chart-head h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.part-chart-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.part-grid-2,
+.part-grid-3 {
+  display: grid;
+  gap: 13px;
+}
+
+.part-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.part-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.part-small-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  background: #fff;
+  transition: .25s ease;
+}
+
+.part-small-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(17, 24, 39, .08);
+}
+
+.part-small-card span {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--red-soft);
+  border: 1px solid #ffb8bf;
+  color: var(--red);
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.part-small-card h3 {
+  margin: 18px 0 8px;
+}
+
+.part-final-card {
+  border-radius: 24px;
+  padding: 28px;
+  background: var(--red);
+  color: #fff;
+  margin-bottom: 18px;
+  box-shadow: 0 20px 44px rgba(239,0,22,.18);
+}
+
+.part-final-card span {
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.3);
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.part-final-card p {
+  color: rgba(255,255,255,.92);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 800;
+}
+
+.part-guide-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.part-guide-top b {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.part-guide-card h2 {
+  margin: 26px 0 24px;
+  font-size: 18px;
+  letter-spacing: -.4px;
+}
+
+.part-guide-sub {
+  font-size: 12px !important;
+  color: #777 !important;
+}
+
+.part-guide-card ol {
+  padding-left: 18px;
+  margin: 28px 0;
+}
+
+.part-guide-card li + li {
+  margin-top: 12px;
+}
+
+.part-guide-note {
+  border-left: 2px solid var(--red);
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 13px;
+  margin-bottom: 18px;
+}
+
+.part-guide-note b {
+  color: var(--red);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.part-guide-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.part-guide-nav button {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 11px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.part-guide-nav button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.part-guide-nav button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.chart-red { fill: #ef0016; }
+.chart-gray { fill: #d1d5db; }
+.chart-dark { fill: #111827; }
+.line-red { stroke: #ef0016; }
+.line-dark { stroke: #111827; }
+.line-gray { stroke: #9ca3af; }
+
+.part-fade-up {
+  animation: partFadeUp .55s ease both;
+}
+
+.part-delay-1 { animation-delay: .08s; }
+.part-delay-2 { animation-delay: .16s; }
+.part-delay-3 { animation-delay: .24s; }
+
+.part-animate-panel {
+  animation: partPanelIn .42s ease both;
+}
+
+@keyframes partFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes partPanelIn {
+  from { opacity: 0; transform: translateX(18px) scale(.99); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@media (max-width: 980px) {
+  .part-body-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .part-guide-card {
+    position: static;
+  }
+
+  .part-step-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .trend-part-page {
+    padding: 24px 16px 52px;
+  }
+
+  .part-header {
+    display: block;
+  }
+
+  .part-page-badge {
+    margin-top: 12px;
+  }
+
+  .part-kpi-grid,
+  .part-grid-2,
+  .part-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .part-step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .part-main-card,
+  .part-guide-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .part-chart-head {
+    display: block;
+  }
+}
+
+.dark .trend-part-page,
+[data-theme="dark"] .trend-part-page {
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --line: #263244;
+  background: #0b0f19;
+}
+
+.dark .part-main-card,
+.dark .part-guide-card,
+.dark .part-chart-card,
+.dark .part-info-card,
+.dark .part-small-card,
+.dark .part-kpi-card,
+.dark .part-step-card,
+[data-theme="dark"] .part-main-card,
+[data-theme="dark"] .part-guide-card,
+[data-theme="dark"] .part-chart-card,
+[data-theme="dark"] .part-info-card,
+[data-theme="dark"] .part-small-card,
+[data-theme="dark"] .part-kpi-card,
+[data-theme="dark"] .part-step-card {
+  background: #111827;
+}
+
+.dark .part-desc,
+.dark .part-info-card p,
+.dark .part-small-card p,
+.dark .part-guide-card p,
+.dark .part-guide-card li,
+[data-theme="dark"] .part-desc,
+[data-theme="dark"] .part-info-card p,
+[data-theme="dark"] .part-small-card p,
+[data-theme="dark"] .part-guide-card p,
+[data-theme="dark"] .part-guide-card li {
+  color: #cbd5e1;
+}

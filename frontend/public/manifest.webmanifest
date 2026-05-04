@@ -1,0 +1,25 @@
+{
+  "name": "TrendIt - YouTube Trend Analytics Platform",
+  "short_name": "TrendIt",
+  "description": "유튜브 트렌드 분석 및 지속성 예측 플랫폼",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ef0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

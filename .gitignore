@@ -1,0 +1,5 @@
+.env
+backend/.env
+frontend/.envbackend.zip 
+*.parquet 
+backend/data/youtube_trends_KR.parquet 

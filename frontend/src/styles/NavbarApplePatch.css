@@ -1,0 +1,22 @@
+/* Optional Apple-style navbar alignment patch */
+.navbar,
+.site-navbar,
+.app-navbar {
+  background: rgba(255,255,255,.92) !important;
+  backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid #edf0f3 !important;
+  box-shadow: none !important;
+}
+
+.navbar a,
+.site-navbar a,
+.app-navbar a {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.navbar .active,
+.site-navbar .active,
+.app-navbar .active {
+  color: #ef0016 !important;
+}

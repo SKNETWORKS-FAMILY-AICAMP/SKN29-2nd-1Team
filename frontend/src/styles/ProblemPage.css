@@ -1,0 +1,324 @@
+.problem-page {
+  padding-bottom: 90px;
+}
+
+.problem-page-header {
+  margin-top: 0;
+  
+}
+
+.problem-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.problem-hero-badge {
+  display: inline-flex;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(255, 0, 0, 0.08);
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 900;
+  border: 1px solid rgba(255, 0, 0, 0.16);
+}
+
+.problem-tabs {
+  margin-bottom: 20px;
+}
+
+.problem-body {
+  margin-top: 0;
+}
+
+.problem-chart-wrap {
+  min-height: 340px;
+}
+
+.problem-empty-chart {
+  min-height: 310px;
+  display: grid;
+  place-items: center;
+  color: var(--text3);
+  background: var(--bg2);
+  border-radius: var(--r-sm);
+}
+
+.problem-pill {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 0, 0, 0.08);
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 900;
+  border: 1px solid rgba(255, 0, 0, 0.12);
+}
+
+.problem-why-grid,
+.problem-task-grid,
+.problem-strategy-grid,
+.problem-eval-grid {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+}
+
+.problem-why-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.problem-task-grid,
+.problem-strategy-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.problem-eval-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.problem-why-card,
+.problem-task-card,
+.problem-strategy-card,
+.problem-eval-card,
+.problem-usage-item {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 0, 0, 0.10), transparent 42%),
+    var(--bg2);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-why-card {
+  min-height: 210px;
+  padding: 20px;
+}
+
+.problem-why-card span {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--red);
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.problem-why-card strong,
+.problem-task-card h3,
+.problem-strategy-card h3 {
+  display: block;
+  margin-top: 14px;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.problem-why-card p,
+.problem-task-card p,
+.problem-strategy-card p,
+.problem-eval-card p,
+.problem-usage-item p {
+  margin: 10px 0 0;
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.problem-task-card,
+.problem-strategy-card {
+  min-height: 255px;
+  padding: 20px;
+}
+
+.problem-task-meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.problem-task-meta div,
+.problem-use-box {
+  padding: 11px 12px;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid var(--border);
+}
+
+.problem-task-meta span,
+.problem-use-box span {
+  display: block;
+  color: var(--text3);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.problem-task-meta strong,
+.problem-use-box strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 12px;
+  word-break: keep-all;
+}
+
+.problem-strategy-card.is-24h {
+  border-color: rgba(255, 0, 0, 0.28);
+  box-shadow: 0 16px 42px rgba(255, 0, 0, 0.08);
+}
+
+.problem-use-box {
+  margin-top: 18px;
+}
+
+.problem-eval-card {
+  min-height: 190px;
+  padding: 18px;
+}
+
+.problem-eval-card span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.problem-eval-card strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 17px;
+}
+
+.problem-eval-card em {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--red);
+  background: rgba(255, 0, 0, 0.08);
+  font-size: 11px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.problem-usage-flow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.problem-usage-item {
+  min-height: 230px;
+  padding: 20px;
+}
+
+.problem-usage-item span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.problem-usage-item strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+@media (max-width: 1100px) {
+  .problem-why-grid,
+  .problem-task-grid,
+  .problem-strategy-grid,
+  .problem-eval-grid,
+  .problem-usage-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-hero-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Dark readability refinement */
+.dark .page,
+.dark [class*="page"],
+.dark [class*="Page"] {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+.dark [class*="section"],
+.dark [class*="Section"] {
+  color: var(--text2) !important;
+}
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="heading"],
+.dark [class*="Heading"] {
+  color: var(--text) !important;
+}
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="label"],
+.dark [class*="Label"] {
+  color: var(--text2) !important;
+}
+
+
+/* Final stable SVG chart system */
+.svg-chart { width: 100%; height: 300px; display: block; overflow: visible; }
+.svg-chart--line { height: 300px; }
+.svg-grid { stroke: rgba(255,45,45,.10); stroke-dasharray: 4 6; stroke-width: 1; }
+.svg-tick { fill: var(--text3); font-size: 12px; font-weight: 600; }
+.svg-label { fill: var(--text2); font-size: 12px; font-weight: 700; }
+.svg-label-strong { fill: var(--text); font-weight: 800; }
+.svg-value { fill: var(--red); font-size: 12px; font-weight: 900; }
+.svg-track, .svg-bar-bg { fill: rgba(255,45,45,.06); }
+.svg-bar { fill: var(--red); transform-box: fill-box; transform-origin: bottom; animation: chartGrowY .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-bar-horizontal { fill: var(--red); transform-box: fill-box; transform-origin: left; animation: chartGrowX .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-area { opacity: 0; animation: chartFade .9s ease .25s forwards; }
+.svg-point { fill: #fff; stroke: var(--red); stroke-width: 4; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-point-group:nth-of-type(1) .svg-point { animation-delay: .15s; }
+.svg-point-group:nth-of-type(2) .svg-point { animation-delay: .25s; }
+.svg-point-group:nth-of-type(3) .svg-point { animation-delay: .35s; }
+.svg-point-group:nth-of-type(4) .svg-point { animation-delay: .45s; }
+.svg-scatter-dot { fill: var(--red); opacity: .66; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-wave-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-soft-fill { fill: rgba(255,45,45,.10); opacity: 0; animation: chartFade .8s ease .25s forwards; }
+@keyframes chartGrowY { from { transform: scaleY(0); opacity:.4; } to { transform: scaleY(1); opacity:1; } }
+@keyframes chartGrowX { from { transform: scaleX(0); opacity:.4; } to { transform: scaleX(1); opacity:1; } }
+@keyframes chartDraw { to { stroke-dashoffset: 0; } }
+@keyframes chartFade { to { opacity: 1; } }
+@keyframes chartPop { from { transform: scale(0); opacity:0; } to { transform: scale(1); opacity:1; } }
+.advanced-chart-card { overflow: hidden; }

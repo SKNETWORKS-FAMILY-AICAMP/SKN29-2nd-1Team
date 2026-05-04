@@ -1,0 +1,78 @@
+:root {
+  --chart-primary: #ff2d2d;
+  --chart-soft: rgba(255,45,45,.42);
+  --chart-good: #16b36d;
+  --chart-warn: #f59f00;
+  --chart-bad: #ff2d2d;
+  --chart-grid: rgba(120,120,120,.16);
+  --chart-axis: #666;
+}
+
+.dark,
+[data-theme='dark'] {
+  --chart-grid: rgba(255,255,255,.13);
+  --chart-axis: rgba(255,255,255,.70);
+}
+
+.advanced-chart-card {
+  width: 100%;
+  min-height: 360px;
+}
+
+.advanced-chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.advanced-chart-head h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -.03em;
+}
+
+.advanced-chart-head span {
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,45,45,.08);
+  color: var(--primary, #ff2d2d);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .advanced-chart-card { min-height: 300px; }
+  .advanced-chart-head { align-items: flex-start; flex-direction: column; }
+}
+
+
+/* Final stable SVG chart system */
+.svg-chart { width: 100%; height: 300px; display: block; overflow: visible; }
+.svg-chart--line { height: 300px; }
+.svg-grid { stroke: rgba(255,45,45,.10); stroke-dasharray: 4 6; stroke-width: 1; }
+.svg-tick { fill: var(--text3); font-size: 12px; font-weight: 600; }
+.svg-label { fill: var(--text2); font-size: 12px; font-weight: 700; }
+.svg-label-strong { fill: var(--text); font-weight: 800; }
+.svg-value { fill: var(--red); font-size: 12px; font-weight: 900; }
+.svg-track, .svg-bar-bg { fill: rgba(255,45,45,.06); }
+.svg-bar { fill: var(--red); transform-box: fill-box; transform-origin: bottom; animation: chartGrowY .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-bar-horizontal { fill: var(--red); transform-box: fill-box; transform-origin: left; animation: chartGrowX .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-area { opacity: 0; animation: chartFade .9s ease .25s forwards; }
+.svg-point { fill: #fff; stroke: var(--red); stroke-width: 4; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-point-group:nth-of-type(1) .svg-point { animation-delay: .15s; }
+.svg-point-group:nth-of-type(2) .svg-point { animation-delay: .25s; }
+.svg-point-group:nth-of-type(3) .svg-point { animation-delay: .35s; }
+.svg-point-group:nth-of-type(4) .svg-point { animation-delay: .45s; }
+.svg-scatter-dot { fill: var(--red); opacity: .66; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-wave-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-soft-fill { fill: rgba(255,45,45,.10); opacity: 0; animation: chartFade .8s ease .25s forwards; }
+@keyframes chartGrowY { from { transform: scaleY(0); opacity:.4; } to { transform: scaleY(1); opacity:1; } }
+@keyframes chartGrowX { from { transform: scaleX(0); opacity:.4; } to { transform: scaleX(1); opacity:1; } }
+@keyframes chartDraw { to { stroke-dashoffset: 0; } }
+@keyframes chartFade { to { opacity: 1; } }
+@keyframes chartPop { from { transform: scale(0); opacity:0; } to { transform: scale(1); opacity:1; } }
+.advanced-chart-card { overflow: hidden; }

@@ -1,0 +1,381 @@
+/* responsive-final-polish.css — 디자인 유지 + 실제 모바일/태블릿 대응 최종 보정 */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.yta-root,
+.yta-page-transition,
+.yta-page,
+.yta-app-inner,
+main,
+section,
+article {
+  min-width: 0;
+}
+
+/* 고정폭/큰 UI가 모바일에서 화면 밖으로 나가지 않도록 공통 방어 */
+img,
+svg,
+canvas,
+video,
+.recharts-wrapper,
+.recharts-surface,
+.recharts-responsive-container {
+  max-width: 100% !important;
+}
+
+/* 홈 히어로 대시보드: PC 디자인 유지, 작은 화면에서만 축소 */
+.hero-dashboard-mock {
+  width: min(460px, 100%) !important;
+  max-width: 100% !important;
+  margin-inline: auto;
+  transform-origin: center top;
+}
+
+.yta-hero-right {
+  min-width: 0 !important;
+  overflow: visible;
+}
+
+/* 카드/차트 섹션의 내용이 가로 스크롤을 만들지 않도록 */
+.metric-card,
+.insight-card,
+.part-card-new,
+.tp-card,
+.tp-chart,
+.dash-card,
+.dashboard-card,
+.model-card,
+.eda-card,
+.feature-card,
+.problem-card,
+.strategy-card,
+.prediction-card,
+.compare-summary-card,
+.compare-category-card {
+  min-width: 0 !important;
+}
+
+/* 버튼/필터류는 모바일에서 자동 줄바꿈 */
+.trending-hero-btns,
+.yta-hero-btns,
+.lp-hero-actions,
+.hero-actions,
+.video-filter-row,
+.dash-filter-row,
+.dashboard-filter-row,
+.tab-row,
+.tp-tab-row,
+.model-tab-row,
+.eda-action-row {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* 표/넓은 차트는 디자인을 깨지 않고 내부 스크롤 */
+.table-wrap,
+.video-table-wrap,
+.dash-table-wrap,
+.chart-scroll,
+.eda-chart-wrap,
+.tp-chart,
+.dashboard-chart-wrap,
+.advanced-chart-card {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1020px) {
+  .yta-hero-right {
+    justify-content: center !important;
+  }
+
+  .hero-floating-card-top {
+    right: 4px !important;
+  }
+
+  .hero-floating-card-bottom {
+    left: 4px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .yta-nav {
+    position: sticky;
+    top: 0;
+  }
+
+  .yta-hero,
+  .trending-hero,
+  .dashboard-hero,
+  .video-hero,
+  .sustain-hero,
+  .campaign-hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-dashboard-mock {
+    min-height: 300px !important;
+  }
+
+  .hero-floating-card {
+    display: none !important;
+  }
+
+  .metrics-section,
+  .cat-section,
+  .insight-section,
+  .analysis-flow-section,
+  .event-preview-section,
+  .cta-section,
+  .dashboard-inner,
+  .video-inner,
+  .sustain-inner,
+  .campaign-inner,
+  .yta-app-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .cat-scroll {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    scroll-snap-type: x proximity;
+  }
+
+  .cat-card-new {
+    scroll-snap-align: start;
+  }
+
+  .metrics-cards,
+  .insight-grid,
+  .analysis-page-grid,
+  .event-preview-cards,
+  .dashboard-grid,
+  .dash-kpi-grid,
+  .video-grid,
+  .campaign-grid,
+  .sustain-grid,
+  .parts-grid-new,
+  .feature-grid,
+  .strategy-grid,
+  .problem-grid,
+  .prediction-grid,
+  .compare-summary-grid,
+  .compare-category-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .metric-card,
+  .insight-card,
+  .part-card-new,
+  .tp-card,
+  .dash-card,
+  .dashboard-card,
+  .feature-card,
+  .problem-card,
+  .strategy-card,
+  .prediction-card {
+    padding: 18px !important;
+  }
+
+  .page-title,
+  .part-page-title,
+  .section-title,
+  .cat-section-title,
+  .metrics-title,
+  .insight-title,
+  .cta-title,
+  .yta-hero-title,
+  .trending-hero-title {
+    letter-spacing: -0.04em !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .yta-nav-logo {
+    min-width: auto !important;
+  }
+
+  .yta-nav-right {
+    gap: 6px !important;
+  }
+
+  .hero-dashboard-mock {
+    min-height: 270px !important;
+  }
+
+  .hero-dashboard-mock > div:first-child {
+    padding: 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-dashboard-mock [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-strip,
+  .metrics-cards {
+    width: 100% !important;
+  }
+
+  .cat-card-new {
+    width: min(86vw, 300px) !important;
+    height: 320px !important;
+  }
+
+  .video-modal-card {
+    width: calc(100vw - 24px) !important;
+    padding: 22px 16px !important;
+  }
+
+  .video-modal-actions {
+    flex-direction: column !important;
+  }
+
+  .modal-primary,
+  .modal-secondary {
+    width: 100% !important;
+  }
+
+  .eda-chart-wrap > *,
+  .tp-chart .recharts-wrapper,
+  .advanced-chart-card .recharts-wrapper {
+    min-width: 420px;
+  }
+}
+
+@media (max-width: 390px) {
+  .yta-hero,
+  .trending-hero,
+  .dashboard-hero,
+  .video-hero,
+  .sustain-hero,
+  .campaign-hero,
+  .metrics-section,
+  .cat-section,
+  .insight-section,
+  .analysis-flow-section,
+  .event-preview-section,
+  .cta-section,
+  .yta-app-inner {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero-dashboard-mock {
+    min-height: 250px !important;
+  }
+
+  .page-title,
+  .part-page-title,
+  .yta-hero-title,
+  .trending-hero-title {
+    font-size: clamp(28px, 11vw, 38px) !important;
+  }
+
+  .metric-card,
+  .insight-card,
+  .part-card-new,
+  .tp-card,
+  .dash-card,
+  .dashboard-card {
+    padding: 16px !important;
+  }
+}
+
+/* final professor-ready polish: 명확한 카피, 단일 CTA, 모바일 안정성 */
+.hero-trust-note {
+  margin: 12px 0 0;
+  max-width: 560px;
+  color: rgba(255,255,255,.58);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -.01em;
+}
+.yta-root:not(.dark) .hero-trust-note {
+  color: rgba(20,20,24,.58);
+}
+.yta-hero-btns--single {
+  gap: 0 !important;
+}
+.yta-hero-btns--single .yta-btn-primary {
+  min-width: 190px;
+  justify-content: center;
+}
+.ml-chart-explain-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid rgba(239,0,22,.14);
+  background: linear-gradient(135deg, rgba(239,0,22,.07), rgba(255,255,255,.72));
+  border-radius: 14px;
+  padding: 13px 14px;
+  margin: 4px 0 14px;
+}
+.ml-chart-explain-note b {
+  flex: 0 0 auto;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: -.02em;
+}
+.ml-chart-explain-note span {
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+@media (max-width: 760px) {
+  .hero-trust-note {
+    font-size: 11px;
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+  .yta-hero-btns--single,
+  .yta-hero-btns--single .yta-btn-primary {
+    width: 100%;
+  }
+  .yta-hero-btns--single .yta-btn-primary {
+    min-height: 48px;
+  }
+  .ml-chart-explain-note {
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+  }
+  .ml-bar-row,
+  .ml-shap-row {
+    grid-template-columns: minmax(82px, .7fr) minmax(0, 1fr) auto !important;
+    gap: 8px !important;
+  }
+  .ml-bar-name,
+  .ml-shap-name {
+    font-size: 11px !important;
+    word-break: keep-all;
+  }
+}
+@media (max-width: 430px) {
+  .target-badge-row {
+    gap: 6px !important;
+  }
+  .target-badge {
+    font-size: 10px !important;
+    padding: 6px 8px !important;
+  }
+  .hero-value-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .trust-slider-wrap {
+    margin-top: 16px !important;
+  }
+}

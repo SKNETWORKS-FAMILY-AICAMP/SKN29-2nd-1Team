@@ -1,0 +1,62 @@
+{
+  "trained_at": "2026-05-02T21:00:49",
+  "features": [
+    "category_group",
+    "entry_rank_log",
+    "T0_view_log",
+    "T0_comment_log",
+    "T0_engagement_ratio_log",
+    "latency_to_trend_log",
+    "pretrend_view_velocity_log",
+    "published_weekday",
+    "hour_sin",
+    "hour_cos",
+    "saturation_index_30d_mean_prev"
+  ],
+  "categorical": [
+    "category_group"
+  ],
+  "numeric": [
+    "entry_rank_log",
+    "T0_view_log",
+    "T0_comment_log",
+    "T0_engagement_ratio_log",
+    "latency_to_trend_log",
+    "pretrend_view_velocity_log",
+    "published_weekday",
+    "hour_sin",
+    "hour_cos",
+    "saturation_index_30d_mean_prev"
+  ],
+  "metrics": {
+    "duration_t0": {
+      "mae_h": 76.6988686565403,
+      "r2": 0.20436137478814664,
+      "rows": 34964
+    },
+    "tdi_t0": {
+      "auc": 0.8086293501567329,
+      "f1": 0.5877587758775877,
+      "accuracy": 0.738023738023738,
+      "rows": 34964
+    },
+    "view24_t0": {
+      "mae_views": 155385.7142359994,
+      "r2": 0.9587812640316832,
+      "rows": 34964
+    }
+  },
+  "numeric_medians": {
+    "entry_rank_log": 3.5553480614894135,
+    "T0_view_log": 13.104728797096538,
+    "T0_comment_log": 6.849066282633458,
+    "T0_engagement_ratio_log": 0.001806932863253558,
+    "latency_to_trend_log": 4.053406805188731,
+    "pretrend_view_velocity_log": 9.156622521525932,
+    "published_weekday": 3.0,
+    "hour_sin": 0.0,
+    "hour_cos": 0.8660254037844387,
+    "saturation_index_30d_mean_prev": 0.47901234567901235
+  },
+  "default_category_group": "Entertainment"
+}

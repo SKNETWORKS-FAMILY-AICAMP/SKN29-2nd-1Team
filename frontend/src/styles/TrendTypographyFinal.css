@@ -1,0 +1,78 @@
+/* Typography + spacing final polish for TrendIt Parts 5/6/7 */
+.trend-part-page {
+  max-width: 1040px;
+  padding: 36px 28px 72px;
+}
+
+.part-header h1 {
+  font-size: 30px !important;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.part-desc {
+  font-size: 15px !important;
+  line-height: 1.7;
+  color: #5f6b7a;
+}
+
+.part-info-card h2,
+.part-final-card h2 {
+  font-size: 22px !important;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.part-small-card h3 {
+  font-size: 16px !important;
+  line-height: 1.35;
+}
+
+.part-info-card p,
+.part-small-card p,
+.part-guide-card p,
+.part-guide-card li,
+.part-chart-head p {
+  font-size: 15px !important;
+  line-height: 1.7;
+}
+
+.part-main-card {
+  padding: 26px;
+}
+
+.part-kpi-card,
+.part-step-card,
+.part-info-card,
+.part-small-card,
+.part-chart-card,
+.part-guide-card {
+  border-radius: 18px;
+}
+
+.part-kpi-grid {
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.part-step-grid {
+  gap: 10px;
+}
+
+.part-body-layout {
+  gap: 20px;
+}
+
+.part-chart-head {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 680px) {
+  .part-header h1 {
+    font-size: 28px !important;
+  }
+
+  .trend-part-page {
+    padding: 24px 16px 52px;
+  }
+}

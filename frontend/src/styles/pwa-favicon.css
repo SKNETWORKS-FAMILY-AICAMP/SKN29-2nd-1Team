@@ -1,0 +1,10 @@
+/* TrendIt PWA theme helpers */
+:root {
+  --trendit-theme-color: #ef0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --trendit-theme-color: #111111;
+  }
+}

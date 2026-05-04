@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --red:       #E50914;
+  --red-dark:  #B20710;
+  --primary:   #E50914;
+  --primary-soft: rgba(229,9,20,0.10);
+  --bg:        #FFFFFF;
+  --bg2:       #F8F9FA;
+  --bg3:       #F0F2F5;
+  --text:      #111111;
+  --text2:     #555555;
+  --text3:     #7A7A7A;
+  --muted:     #8A8A8A;
+  --border:    #E5E7EB;
+  --card:      #FFFFFF;
+  --nav-bg:    rgba(255,255,255,0.93);
+  --shadow:    0 2px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.13);
+  --r:         16px;
+  --r-sm:      10px;
+  --ease:      0.22s cubic-bezier(0.4,0,0.2,1);
+}
+.dark {
+  --red:       #FF3B3B;
+  --red-dark:  #E50914;
+  --primary:   #FF3B3B;
+  --primary-soft: rgba(255,59,59,0.14);
+  --bg:        #0F0F0F;
+  --bg2:       #171717;
+  --bg3:       #242424;
+  --text:      #F8F8F8;
+  --text2:     #D0D0D0;
+  --text3:     #A8A8A8;
+  --muted:     #9A9A9A;
+  --border:    #333333;
+  --card:      #1A1A1A;
+  --nav-bg:    rgba(15,15,15,0.94);
+  --shadow:    0 2px 16px rgba(0,0,0,0.55);
+  --shadow-lg: 0 12px 42px rgba(0,0,0,0.62);
+}
+html, body, #root {
+  min-height: 100%;
+  height: 100%;
+}
+
+html {
+  background: var(--bg);
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 다크모드: html/body까지 변수 상속 */
+html.dark,
+body.dark {
+  --red:       #FF3B3B;
+  --red-dark:  #E50914;
+  --primary:   #FF3B3B;
+  --primary-soft: rgba(255,59,59,0.14);
+  --bg:        #0F0F0F;
+  --bg2:       #171717;
+  --bg3:       #242424;
+  --text:      #F8F8F8;
+  --text2:     #D0D0D0;
+  --text3:     #A8A8A8;
+  --muted:     #9A9A9A;
+  --border:    #333333;
+  --card:      #1A1A1A;
+  --nav-bg:    rgba(15,15,15,0.94);
+  --shadow:    0 2px 16px rgba(0,0,0,0.55);
+  --shadow-lg: 0 12px 42px rgba(0,0,0,0.62);
+}
+.dark .stat-strip   { background: var(--card); }
+.dark .trust-badge  { background: var(--bg3); border-color: var(--border); }
+.dark .skeleton {
+  background: linear-gradient(90deg, var(--bg2) 25%, var(--bg3) 50%, var(--bg2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Dark Mode Readability Patch — 다크 그레이 + 톤다운 레드
+   목표: 검은 배경에서 제목/본문/설명/버튼/카드 대비를 안정화
+   ═══════════════════════════════════════════════════════════════ */
+html.dark,
+body.dark,
+.dark {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="val"],
+.dark [class*="Val"],
+.dark strong,
+.dark b {
+  color: var(--text) !important;
+}
+
+.dark p,
+.dark span,
+.dark li,
+.dark td,
+.dark th,
+.dark label,
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="label"],
+.dark [class*="Label"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="meta"],
+.dark [class*="Meta"] {
+  color: var(--text2) !important;
+}
+
+.dark small,
+.dark em,
+.dark [class*="muted"],
+.dark [class*="Muted"],
+.dark [class*="eyebrow"],
+.dark [class*="Eyebrow"] {
+  color: var(--text3) !important;
+}
+
+.dark a,
+.dark .highlight,
+.dark [class*="more"],
+.dark [class*="More"] {
+  color: var(--red) !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background: #141414 !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  caret-color: var(--red);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--muted) !important;
+}
+
+.dark table,
+.dark thead,
+.dark tbody,
+.dark tr,
+.dark .video-table,
+.dark .stat-table {
+  color: var(--text2) !important;
+}
+
+.dark th {
+  color: var(--text) !important;
+}
+
+.dark tr:hover,
+.dark .video-table tr:hover {
+  background: rgba(255,59,59,0.12) !important;
+}
+
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"],
+.dark [class*="modal"],
+.dark [class*="Modal"] {
+  border-color: var(--border) !important;
+}
+
+.dark [class*="card"]:hover,
+.dark [class*="Card"]:hover,
+.dark [class*="box"]:hover,
+.dark [class*="Box"]:hover {
+  border-color: rgba(255,59,59,0.55) !important;
+}
+
+.dark button:not(.yta-icon-btn),
+.dark .btn,
+.dark [class*="btn"],
+.dark [class*="Btn"] {
+  color: #FFFFFF;
+}
+
+.dark button[disabled],
+.dark .disabled {
+  opacity: 0.58;
+}
+
+.dark svg text {
+  fill: var(--text2) !important;
+}
+
+.dark ::selection {
+  background: rgba(255,59,59,0.35);
+  color: #fff;
+}
+
+/* Recharts compatibility shim: preserves chart spaces even when the external package/runtime is unavailable. */
+.recharts-shim-container { width: 100%; min-height: 250px; }
+.recharts-shim-svg { width: 100%; height: 100%; min-height: 240px; display: block; overflow: visible; }
+.recharts-shim-svg text { font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.recharts-shim-empty { width: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; color: var(--text3, #777); background: var(--bg2, #f6f6f6); border-radius: 14px; }
+
+
+/* === FINAL UX POLISH: loading, readability, smooth scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.loading,
+.loading-state,
+.skeleton,
+.skeleton-line,
+.skeleton-card {
+  animation: trenditPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes trenditPulse {
+  0% { opacity: 0.58; }
+  50% { opacity: 1; }
+  100% { opacity: 0.58; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .loading,
+  .loading-state,
+  .skeleton,
+  .skeleton-line,
+  .skeleton-card {
+    animation: none !important;
+  }
+}

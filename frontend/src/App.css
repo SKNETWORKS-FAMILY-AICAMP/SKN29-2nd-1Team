@@ -1,0 +1,259 @@
+/* App.css — 스타일 진입점 */
+@import './styles/global.css';
+@import './styles/Navbar.css';
+@import './styles/LandingPage.css';
+@import './styles/TrendingPage.css';
+@import './styles/EDAPage.css';
+@import './styles/ModelPage.css';
+@import './styles/responsive-upgrades.css';
+@import './styles/responsive-final-polish.css';
+@import './styles/mobile-tabs.css';
+@import './styles/home-responsive-fix.css';
+
+
+/* =========================================================
+   TrendIt FINAL Unified Part Layout (Directly applied)
+   - No additional import required: appended inside App.css
+   - Part 1~9 width 1068px
+   - h1 30px / body 15px
+   - 8px spacing grid
+   - card text overflow protection
+   ========================================================= */
+:root {
+  --trendit-page-width: 1068px;
+  --trendit-space-1: 8px;
+  --trendit-space-2: 16px;
+  --trendit-space-3: 24px;
+  --trendit-space-4: 32px;
+  --trendit-radius-sm: 10px;
+  --trendit-radius-md: 16px;
+  --trendit-border: #e5e7eb;
+  --trendit-text: #111827;
+  --trendit-muted: #5f6b7a;
+  --trendit-red: #ef0016;
+}
+
+/* Analysis parts container width */
+.yta-app-inner,
+.compare-page,
+.insight-page,
+.feature-page,
+.problem-page,
+.prediction-page,
+.strategy-page,
+.model-page,
+.eda-page,
+.trend-part-page,
+.tp-page,
+.part-page,
+.page-container,
+.content-container {
+  max-width: var(--trendit-page-width) !important;
+  width: min(100%, var(--trendit-page-width)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.yta-app-inner {
+  padding-left: var(--trendit-space-1) !important;
+  padding-right: var(--trendit-space-1) !important;
+}
+
+/* Unified headings */
+.part-page-title,
+.page-title,
+.section-title,
+.compare-hero h1,
+.insight-page-header h1,
+.feature-page-header h1,
+.problem-page-header h1,
+.prediction-page-header h1,
+.strategy-page-header h1,
+.model-page h1,
+.eda-page h1,
+.yta-app-inner h1 {
+  font-size: 30px !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.7px !important;
+  font-weight: 800 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Unified body text */
+.part-page-subtitle,
+.page-subtitle,
+.section-desc,
+.compare-page p,
+.insight-page p,
+.feature-page p,
+.problem-page p,
+.prediction-page p,
+.strategy-page p,
+.model-page p,
+.eda-page p,
+.yta-app-inner p,
+.yta-app-inner li {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Unified card typography */
+.yta-app-inner h2,
+.compare-page h2,
+.insight-page h2,
+.feature-page h2,
+.problem-page h2,
+.prediction-page h2,
+.strategy-page h2,
+.model-page h2,
+.eda-page h2 {
+  font-size: 22px !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.4px !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+.yta-app-inner h3,
+.compare-page h3,
+.insight-page h3,
+.feature-page h3,
+.problem-page h3,
+.prediction-page h3,
+.strategy-page h3,
+.model-page h3,
+.eda-page h3 {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Keep card text inside */
+.yta-app-inner *,
+.compare-page *,
+.insight-page *,
+.feature-page *,
+.problem-page *,
+.prediction-page *,
+.strategy-page *,
+.model-page *,
+.eda-page * {
+  box-sizing: border-box !important;
+  max-width: 100%;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Card / panel unified size */
+.part-card-new,
+.compare-summary-card,
+.compare-category-card,
+.insight-card,
+.insight-metric-card,
+.feature-card,
+.problem-card,
+.strategy-card,
+.prediction-card,
+.model-card,
+.eda-card,
+[class*="card"],
+[class*="Card"],
+[class*="panel"],
+[class*="Panel"] {
+  overflow: hidden !important;
+  border-radius: var(--trendit-radius-md) !important;
+}
+
+/* Apply calmer card spacing without breaking charts */
+.compare-summary-card,
+.compare-category-card,
+.part-card-new {
+  padding: var(--trendit-space-3) !important;
+}
+
+.parts-grid-new,
+.compare-summary-grid,
+.compare-category-grid,
+.insight-grid,
+.feature-grid,
+.problem-grid,
+.strategy-grid,
+.prediction-grid {
+  gap: var(--trendit-space-2) !important;
+}
+
+/* Buttons */
+.back-btn,
+.pcn-arrow,
+.trending-hero-btn-primary,
+.trending-hero-btn-secondary,
+.yta-app-inner button {
+  min-height: 38px;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  border-radius: var(--trendit-radius-sm) !important;
+}
+
+/* Part cards list: prevent overflow and unify */
+.part-card-new {
+  min-height: 260px !important;
+}
+.pcn-title {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+.pcn-desc {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+.pcn-tags,
+.part-eda-tags {
+  gap: var(--trendit-space-1) !important;
+}
+
+/* Chart safety */
+.recharts-wrapper,
+.recharts-responsive-container,
+svg {
+  max-width: 100% !important;
+}
+
+/* Mobile */
+@media (max-width: 1080px) {
+  .yta-app-inner,
+  .compare-page,
+  .insight-page,
+  .feature-page,
+  .problem-page,
+  .prediction-page,
+  .strategy-page,
+  .model-page,
+  .eda-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: var(--trendit-space-2) !important;
+    padding-right: var(--trendit-space-2) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .part-page-title,
+  .page-title,
+  .section-title,
+  .yta-app-inner h1 {
+    font-size: 28px !important;
+  }
+
+  .part-card-new {
+    min-height: auto !important;
+  }
+}

@@ -1,0 +1,190 @@
+/* summary row */
+.eda-summary-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; margin-bottom:4px; }
+.eda-summary-item { display:flex; flex-direction:column; gap:3px; padding:11px 18px; background:var(--bg2); border:1px solid var(--border); border-radius:var(--r-sm); }
+.eda-summary-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:var(--text3); }
+.eda-summary-val   { font-size:18px; font-weight:800; letter-spacing:-0.5px; color:var(--text); }
+
+/* tabs */
+.eda-tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:20px; }
+.eda-tab  { display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:10px 12px; background:var(--bg2); border:1px solid var(--border); border-radius:var(--r-sm); cursor:pointer; font-family:inherit; white-space:nowrap; transition:all var(--ease); text-align:left; }
+.eda-tab:hover { background:var(--bg3); border-color:var(--text3); }
+.eda-tab.on    { background:var(--red); border-color:var(--red); }
+.eda-tab-tag   { font-size:9px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--text3); transition:color var(--ease); }
+.eda-tab.on .eda-tab-tag   { color:rgba(255,255,255,0.7); }
+.eda-tab-title { font-size:11px; font-weight:600; color:var(--text2); transition:color var(--ease); white-space:normal; line-height:1.3; }
+.eda-tab:hover .eda-tab-title { color:var(--text); }
+.eda-tab.on    .eda-tab-title { color:#fff; }
+
+/* body */
+.eda-body { display:grid; grid-template-columns:1fr 300px; gap:16px; align-items:stretch; }
+
+/* chart panel */
+.eda-chart-panel { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:24px; display:flex; flex-direction:column; }
+.eda-chart-title { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:var(--text3); margin-bottom:16px; }
+.eda-chart-wrap  { width:100%; overflow:hidden; flex:1; min-height:320px; display:block; }
+
+/* desc panel */
+.eda-desc-panel { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:20px; display:flex; flex-direction:column; gap:14px; min-height:0; }
+.eda-tag-row    { display:flex; align-items:center; justify-content:space-between; }
+.eda-big-tag    { font-size:10px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; color:var(--red); background:rgba(255,0,0,0.08); border:1px solid rgba(255,0,0,0.18); padding:3px 9px; border-radius:100px; }
+.eda-progress   { font-size:11px; font-weight:600; color:var(--text3); }
+.eda-desc-title { font-size:14px; font-weight:800; letter-spacing:-0.3px; color:var(--text); line-height:1.35; }
+.eda-findings-label { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:var(--text3); }
+.eda-findings   { list-style:none; display:flex; flex-direction:column; gap:8px; flex:1; }
+.eda-findings li { display:flex; gap:8px; font-size:12px; color:var(--text2); line-height:1.55; }
+.eda-finding-num { font-size:9px; font-weight:800; color:var(--red); flex-shrink:0; margin-top:3px; background:rgba(255,0,0,0.08); width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.eda-note-box  { display:flex; gap:8px; align-items:flex-start; padding:8px 10px; background:var(--bg2); border-left:3px solid var(--red); border-radius:0 var(--r-sm) var(--r-sm) 0; }
+.eda-note-label { font-size:8px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:var(--red); flex-shrink:0; margin-top:2px; }
+.eda-note-text  { font-size:11px; color:var(--text2); line-height:1.55; }
+.eda-nav-btns   { display:flex; gap:8px; margin-top:auto; padding-top:4px; }
+.eda-nav-btn    { flex:1; padding:9px; border-radius:var(--r-sm); border:1px solid var(--border); background:none; font-family:inherit; font-size:12px; font-weight:600; color:var(--text2); cursor:pointer; transition:all var(--ease); }
+.eda-nav-btn:hover:not(:disabled) { background:var(--red); color:#fff; border-color:var(--red); }
+.eda-nav-btn:disabled { opacity:0.25; cursor:not-allowed; }
+
+/* api status */
+.api-status     { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; padding:4px 10px; border-radius:100px; margin-top:8px; border:1px solid; }
+.api-status-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+.api-status--loading { color:#F59E0B; background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.25); }
+.api-status--loading .api-status-dot { background:#F59E0B; animation:pulse 1.2s ease-in-out infinite; }
+.api-status--ok      { color:#22C55E; background:rgba(34,197,94,0.08);  border-color:rgba(34,197,94,0.25); }
+.api-status--ok      .api-status-dot { background:#22C55E; }
+.api-status--fail    { color:#EF4444; background:rgba(239,68,68,0.08);  border-color:rgba(239,68,68,0.25); }
+.api-status--fail    .api-status-dot { background:#EF4444; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+/* skeleton */
+.skeleton { background:linear-gradient(90deg,var(--bg2) 25%,var(--bg3) 50%,var(--bg2) 75%); background-size:200% 100%; animation:shimmer 1.5s infinite; }
+@keyframes shimmer { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
+.eda-skeleton-wrap  { display:flex; flex-direction:column; gap:16px; }
+.eda-skeleton-tabs  { display:flex; gap:6px; flex-wrap:wrap; padding-bottom:16px; border-bottom:1px solid var(--border); }
+.eda-skeleton-body  { display:grid; grid-template-columns:1fr 300px; gap:16px; }
+.eda-skeleton-chart { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:24px; display:flex; flex-direction:column; gap:16px; }
+.eda-skeleton-desc  { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:20px; display:flex; flex-direction:column; gap:12px; }
+
+@media (max-width:860px) { .eda-body { grid-template-columns:1fr; } .eda-skeleton-body { grid-template-columns:1fr; } .eda-tabs { gap:4px; } .eda-tab { padding:6px 10px; } .eda-tab-title { font-size:10.5px; } }
+/* ── 모바일 탭 드롭다운 ────────────────────────────────────────── */
+/* 기본: 숨김 (인라인 style="display:none" 과 동일) */
+.eda-tab-mobile { display: none; }
+
+@media (max-width: 680px) {
+  /* 기존 수평 탭 숨기기 */
+  .eda-tabs { display: none !important; }
+
+  /* 모바일 드롭다운 표시 */
+  .eda-tab-mobile { display: block !important; position: relative; margin-bottom: 12px; }
+
+  .eda-tab-mobile-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg2);
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .eda-tab-mobile-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0; right: 0;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .eda-tab-mobile-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+  }
+  .eda-tab-mobile-item:last-child { border-bottom: none; }
+  .eda-tab-mobile-item:hover { background: var(--bg3); }
+  .eda-tab-mobile-item.on { color: var(--red); font-weight: 600; }
+
+  /* 바디 레이아웃을 세로로 */
+  .eda-body { flex-direction: column !important; }
+  .eda-chart-panel,
+  .eda-desc-panel { width: 100% !important; }
+}
+
+/* Dark readability refinement */
+.dark .page,
+.dark [class*="page"],
+.dark [class*="Page"] {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+.dark [class*="section"],
+.dark [class*="Section"] {
+  color: var(--text2) !important;
+}
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="heading"],
+.dark [class*="Heading"] {
+  color: var(--text) !important;
+}
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="label"],
+.dark [class*="Label"] {
+  color: var(--text2) !important;
+}
+
+
+/* Final stable SVG chart system */
+.svg-chart { width: 100%; height: 300px; display: block; overflow: visible; }
+.svg-chart--line { height: 300px; }
+.svg-grid { stroke: rgba(255,45,45,.10); stroke-dasharray: 4 6; stroke-width: 1; }
+.svg-tick { fill: var(--text3); font-size: 12px; font-weight: 600; }
+.svg-label { fill: var(--text2); font-size: 12px; font-weight: 700; }
+.svg-label-strong { fill: var(--text); font-weight: 800; }
+.svg-value { fill: var(--red); font-size: 12px; font-weight: 900; }
+.svg-track, .svg-bar-bg { fill: rgba(255,45,45,.06); }
+.svg-bar { fill: var(--red); transform-box: fill-box; transform-origin: bottom; animation: chartGrowY .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-bar-horizontal { fill: var(--red); transform-box: fill-box; transform-origin: left; animation: chartGrowX .9s cubic-bezier(.2,.8,.2,1) both; }
+.svg-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-area { opacity: 0; animation: chartFade .9s ease .25s forwards; }
+.svg-point { fill: #fff; stroke: var(--red); stroke-width: 4; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-point-group:nth-of-type(1) .svg-point { animation-delay: .15s; }
+.svg-point-group:nth-of-type(2) .svg-point { animation-delay: .25s; }
+.svg-point-group:nth-of-type(3) .svg-point { animation-delay: .35s; }
+.svg-point-group:nth-of-type(4) .svg-point { animation-delay: .45s; }
+.svg-scatter-dot { fill: var(--red); opacity: .66; transform-box: fill-box; transform-origin: center; animation: chartPop .45s cubic-bezier(.2,.8,.2,1) both; }
+.svg-wave-line { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: chartDraw 1.15s cubic-bezier(.2,.8,.2,1) forwards; }
+.svg-soft-fill { fill: rgba(255,45,45,.10); opacity: 0; animation: chartFade .8s ease .25s forwards; }
+@keyframes chartGrowY { from { transform: scaleY(0); opacity:.4; } to { transform: scaleY(1); opacity:1; } }
+@keyframes chartGrowX { from { transform: scaleX(0); opacity:.4; } to { transform: scaleX(1); opacity:1; } }
+@keyframes chartDraw { to { stroke-dashoffset: 0; } }
+@keyframes chartFade { to { opacity: 1; } }
+@keyframes chartPop { from { transform: scale(0); opacity:0; } to { transform: scale(1); opacity:1; } }
+.advanced-chart-card { overflow: hidden; }

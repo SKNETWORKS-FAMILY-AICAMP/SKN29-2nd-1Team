@@ -1,0 +1,99 @@
+/* ── 모바일 탭 드롭다운 ────────────────────────────────────────── */
+/* 데스크톱에서는 기존 eda-tabs를 보여주고, 모바일에서는 드롭다운을 보여줌 */
+
+.eda-tab-mobile { display: none; }
+
+@media (max-width: 680px) {
+  /* 기존 수평 탭 숨기기 */
+  .eda-tabs { display: none; }
+
+  /* 모바일 드롭다운 표시 */
+  .eda-tab-mobile { display: block; position: relative; margin-bottom: 12px; }
+
+  .eda-tab-mobile-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg2);
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .eda-tab-mobile-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0; right: 0;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .eda-tab-mobile-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+  }
+  .eda-tab-mobile-item:last-child { border-bottom: none; }
+  .eda-tab-mobile-item:hover { background: var(--bg3); }
+  .eda-tab-mobile-item.on { color: var(--red); font-weight: 600; }
+
+  /* 바디 레이아웃을 세로로 */
+  .eda-body { flex-direction: column !important; }
+  .eda-chart-panel,
+  .eda-desc-panel { width: 100% !important; }
+}
+
+
+/* Dark readability refinement */
+.dark .page,
+.dark [class*="page"],
+.dark [class*="Page"] {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+.dark [class*="section"],
+.dark [class*="Section"] {
+  color: var(--text2) !important;
+}
+.dark [class*="card"],
+.dark [class*="Card"],
+.dark [class*="box"],
+.dark [class*="Box"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.dark [class*="title"],
+.dark [class*="Title"],
+.dark [class*="heading"],
+.dark [class*="Heading"] {
+  color: var(--text) !important;
+}
+.dark [class*="desc"],
+.dark [class*="Desc"],
+.dark [class*="sub"],
+.dark [class*="Sub"],
+.dark [class*="label"],
+.dark [class*="Label"] {
+  color: var(--text2) !important;
+}

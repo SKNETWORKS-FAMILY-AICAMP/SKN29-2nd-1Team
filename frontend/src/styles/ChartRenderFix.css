@@ -1,0 +1,107 @@
+/* ChartRenderFix.css
+   Recharts ResponsiveContainer가 flex/grid 내부에서 0px로 계산되는 문제 보정.
+   - height !important 전역 적용은 제거 (StrategyPage 등 height:100% 패턴을 깨뜨림)
+   - 대신 width/display/overflow만 보정
+*/
+
+/* 공통 차트 패널 min-width 보정 */
+.eda-chart-panel,
+.dash-card,
+.dashboard-card,
+.tp-chart,
+.model-chart-card,
+.strategy-chart-card,
+.prediction-chart-card,
+.insight-chart-card,
+.advanced-chart-card {
+  min-width: 0;
+}
+
+[class*="chart-wrap"],
+[class*="ChartWrap"],
+[class*="chart-panel"],
+[class*="ChartPanel"],
+.eda-chart-wrap,
+.feature-chart-wrap {
+  min-width: 0 !important;
+}
+
+/* Part 1/2 SVG 차트 영역 */
+.eda-chart-wrap,
+.feature-chart-wrap {
+  width: 100% !important;
+  min-height: 300px !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+.feature-chart-wrap {
+  min-height: 330px !important;
+}
+
+/* EDACharts.jsx 직접 SVG */
+.eda-chart-wrap > svg,
+.feature-chart-wrap > svg,
+.eda-chart-wrap svg,
+.feature-chart-wrap svg {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  min-height: 230px !important;
+  height: auto !important;
+  overflow: visible !important;
+  flex: 1 1 auto !important;
+}
+
+/* Recharts 공통 — height는 강제하지 않음, width/display만 보정 */
+.recharts-responsive-container {
+  width: 100% !important;
+  min-width: 100% !important;
+  display: block !important;
+}
+
+/* height가 명시적으로 필요한 구역만 개별 지정 */
+.dash-card .recharts-responsive-container,
+.dashboard-card .recharts-responsive-container,
+.advanced-chart-card .recharts-responsive-container {
+  height: 300px !important;
+  min-height: 260px !important;
+}
+
+.tp-chart .recharts-responsive-container,
+.model-chart-card .recharts-responsive-container {
+  height: 250px !important;
+  min-height: 220px !important;
+}
+
+/* recharts 내부 SVG */
+.recharts-wrapper,
+.recharts-surface {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.recharts-layer,
+.recharts-cartesian-axis,
+.recharts-bar-rectangle,
+.recharts-line,
+.recharts-area,
+.recharts-scatter-symbol,
+.recharts-pie-sector {
+  visibility: visible !important;
+}
+
+/* 카드 내부 여백 */
+.advanced-chart-card {
+  width: 100% !important;
+  min-height: 360px !important;
+}
+
+.feature-empty-chart,
+.empty-state,
+[class*="empty"] {
+  min-height: 220px;
+}

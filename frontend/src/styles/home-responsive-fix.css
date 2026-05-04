@@ -1,0 +1,226 @@
+/* home-responsive-fix.css — 메인 페이지 최종 반응형 보정 */
+.yta-page {
+  overflow-x: hidden;
+}
+
+.yta-hero {
+  min-height: auto;
+  padding: clamp(96px, 12vw, 136px) clamp(20px, 6vw, 80px) clamp(56px, 8vw, 90px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.yta-hero-left,
+.yta-hero-right {
+  min-width: 0;
+}
+
+.yta-hero-title {
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+  word-break: keep-all;
+}
+
+.yta-hero-sub {
+  max-width: 680px;
+  font-size: clamp(15px, 1.55vw, 19px);
+  line-height: 1.72;
+  word-break: keep-all;
+}
+
+.yta-hero-btns,
+.lp-hero-actions,
+.hero-actions,
+.cta-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.yta-mock {
+  width: min(100%, 520px);
+  margin-inline: auto;
+}
+
+.stat-strip {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cat-section,
+.metrics-section,
+.insight-section,
+.analysis-flow-section,
+.event-preview-section,
+.cta-section {
+  padding-left: max(20px, calc((100vw - 1180px) / 2));
+  padding-right: max(20px, calc((100vw - 1180px) / 2));
+}
+
+.cat-section-head,
+.metrics-header,
+.insight-head,
+.analysis-flow-head {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cat-scroll {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: max(24px, calc((100vw - 1364px) / 2)) !important;
+  padding-right: max(24px, calc((100vw - 1364px) / 2)) !important;
+}
+
+.metrics-cards,
+.insight-grid,
+.analysis-page-grid,
+.event-preview-cards {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.metrics-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.insight-grid,
+.analysis-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 18px;
+}
+
+.event-preview-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+
+.event-preview-copy,
+.event-preview-cards {
+  min-width: 0;
+}
+
+@media (max-width: 1020px) {
+  .yta-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .yta-hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .yta-hero-btns,
+  .lp-hero-actions,
+  .hero-actions {
+    justify-content: center;
+  }
+  .stat-strip,
+  .metrics-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .event-preview-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .yta-hero {
+    padding: 92px 20px 48px;
+    gap: 30px;
+    text-align: left;
+  }
+  .yta-hero-title {
+    font-size: clamp(36px, 12vw, 54px);
+  }
+  .yta-hero-sub {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .yta-hero-btns,
+  .lp-hero-actions,
+  .hero-actions,
+  .cta-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .yta-btn-primary,
+  .yta-btn-secondary,
+  .lp-btn,
+  .hero-btn,
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .stat-strip,
+  .metrics-cards {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+  }
+  .stat-strip-card {
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-strip-card:last-child {
+    border-bottom: 0;
+  }
+  .cat-section-title,
+  .metrics-title,
+  .insight-title,
+  .cta-title {
+    font-size: clamp(28px, 8vw, 40px) !important;
+    line-height: 1.14 !important;
+    word-break: keep-all;
+  }
+  .cat-section-head,
+  .insight-head,
+  .analysis-flow-head {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+  .cat-scroll {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    scroll-padding-inline: 20px;
+  }
+  .cat-card-new {
+    flex-basis: min(78vw, 260px);
+    width: min(78vw, 260px);
+    height: 330px;
+  }
+}
+
+@media (max-width: 460px) {
+  .yta-hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .target-badge-row,
+  .trust-track {
+    max-width: 100%;
+  }
+  .cat-scroll {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    scroll-padding-inline: 16px;
+  }
+  .cat-card-new {
+    flex-basis: 82vw;
+    width: 82vw;
+  }
+}
