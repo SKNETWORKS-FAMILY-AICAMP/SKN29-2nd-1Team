@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./docs/assets/trendit-analysis.png" alt="TrendIt analysis dashboard" width="100%" />
-</p>
-
 <h1 align="center">📈 TrendIt</h1>
 
 <p align="center">
